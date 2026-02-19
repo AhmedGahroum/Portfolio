@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frontend Developer portfolio - AM">
+  <title>Portfolio</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/themes.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="navbar" role="banner">
+    <div class="container navbar__inner animate-fade-up">
+      <a href="#" class="navbar__logo" aria-label="Home">AHMED</a>
+      <nav class="navbar__nav" id="main-nav" role="navigation" aria-label="Main">
+        <ul class="navbar__links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#project">Project</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="navbar__actions">
+        <button type="button" class="btn btn--icon theme-toggle" aria-label="Toggle theme">
+          <span class="theme-toggle__icon" aria-hidden="true">☀</span>
+        </button>
+        <button type="button" class="navbar__menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span class="navbar__menu-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="container hero__content animate-fade-up">
+        <div class="hero__logo" aria-hidden="true"></div>
+        <h1 class="hero__title">Web Developer</h1>
+        <p class="hero__bio">
+          I build clean, accessible, and responsive web experiences with vanilla HTML, CSS, and JavaScript.
+        </p>
+        <div class="hero__actions">
+          <a href="#project" class="btn btn--primary">View Project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <div class="container animate-fade-up animate-delay-100">
+        <h2 id="about-heading" class="section__title">About</h2>
+        <p class="about__text">
+          I specialize in creating modern, minimal interfaces that prioritize user experience and performance.
+          Every line of code is written with clarity and maintainability in mind.
+        </p>
+        <div class="stats">
+          <div class="stat-card">
+            <span class="stat-card__value">1</span>
+            <span class="stat-card__label">Featured Project</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__value">Fast & Responsive</span>
+            <span class="stat-card__label">UI Focus</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__value">Clean</span>
+            <span class="stat-card__label">Vanilla JS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section section--alt" id="skills" aria-labelledby="skills-heading">
+      <div class="container animate-fade-up animate-delay-200">
+        <h2 id="skills-heading" class="section__title">Skills</h2>
+        <div class="skills-chips">
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">Responsive Design</span>
+          <span class="chip">Accessibility</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Project -->
+    <section class="section" id="project" aria-labelledby="project-heading">
+      <div class="container animate-fade-up animate-delay-300">
+        <h2 id="project-heading" class="section__title">Featured Project</h2>
+        <article class="project-card">
+          <h3 class="project-card__title">Portfolio Website</h3>
+          <p class="project-card__description">
+            A minimal, single-page portfolio built with vanilla HTML, CSS, and JavaScript.
+            Dark/light theme toggle, responsive design, and accessible form validation.
+          </p>
+          <ul class="project-card__bullets">
+            <li><strong>Problem:</strong> Need a fast, no-framework portfolio that showcases clean code.</li>
+            <li><strong>Solution:</strong> Vanilla stack with modular CSS, semantic HTML, and progressive enhancement.
+            </li>
+          </ul>
+          <div class="project-card__tech">
+            <span class="chip chip--tech">HTML</span>
+            <span class="chip chip--tech">CSS</span>
+            <span class="chip chip--tech">JavaScript</span>
+          </div>
+          <div class="project-card__actions">
+            <a href="#" class="btn btn--primary">Live Demo</a>
+            <a href="#" class="btn btn--secondary">GitHub</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section--alt" id="contact" aria-labelledby="contact-heading">
+      <div class="container animate-fade-up animate-delay-400">
+        <h2 id="contact-heading" class="section__title">Contact</h2>
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name">
+            <span class="form-error" id="name-error" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="your@email.com">
+            <span class="form-error" id="email-error" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required rows="5" placeholder="Your message..."></textarea>
+            <span class="form-error" id="message-error" role="alert"></span>
+          </div>
+          <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+          <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner animate-fade-up animate-delay-500">
+      <p class="footer__copyright">&copy; 2026 AM. All rights reserved.</p>
+      <div class="footer__social">
+        <a href="#" class="footer__link" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" class="footer__link" aria-label="Twitter">Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="js/app.js"></script>
+</body>
+
+</html>

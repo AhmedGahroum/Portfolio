@@ -1,0 +1,134 @@
+/* ============================================
+   layout.css - Container, section spacing, grids, responsive
+   ============================================ */
+
+/* --- Container --- */
+.container {
+  width: 100%;
+  max-width: 64rem;
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-inline: var(--space-xl);
+  }
+}
+
+/* --- Section spacing --- */
+.section {
+  padding-block: var(--space-3xl);
+}
+
+.section--alt {
+  background-color: var(--color-bg-alt);
+}
+
+.section__title {
+  margin-bottom: var(--space-xl);
+  text-align: center;
+}
+
+/* --- Hero layout --- */
+.hero {
+  min-height: 60vh;
+  background-color: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: var(--space-3xl);
+  text-align: center;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.hero__title {
+  margin-bottom: var(--space-xs);
+}
+
+.hero__bio {
+  max-width: 36ch;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  justify-content: center;
+  margin-top: var(--space-sm);
+}
+
+/* --- About layout --- */
+.about__text {
+  max-width: 65ch;
+  margin-inline: auto;
+  margin-bottom: var(--space-2xl);
+  text-align: center;
+}
+
+/* Stats grid */
+.stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 480px) {
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --- Skills layout --- */
+.skills-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  justify-content: center;
+}
+
+/* --- Project layout --- */
+.project-card {
+  max-width: 42rem;
+  margin-inline: auto;
+}
+
+/* --- Contact form layout --- */
+.contact-form {
+  max-width: 28rem;
+  margin-inline: auto;
+}
+
+/* --- Footer layout --- */
+.footer {
+  padding-block: var(--space-xl);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .footer__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.footer__social {
+  display: flex;
+  gap: var(--space-lg);
+}
